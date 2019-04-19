@@ -26,10 +26,10 @@ class TestCollectionMethods(unittest.TestCase):
 
 	def prueba_mayor(self):
 
-		temp_lista = [27, 26, 28, 29, 30, 31, 34, 37, 32, 31, 27, 26]
+		temp_lista = [27, 26, 28, 29, 30, 31, 34, 40, 32, 31, 27, 26]
 		mayor=temperature_methods.mayor(temp_lista)
 
-		self.assertEqual(mayor, 37)
+		self.assertEqual(mayor, 40)
 
 	def prueba_desv_estandar(self):
 

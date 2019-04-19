@@ -72,10 +72,15 @@ desv_estandar_guajira=temperature_methods.desv_estandar(lista_temp_guajira)
 prom_nacional=(sum_temp_santander+sum_temp_narinno+sum_temp_guajira)/36
 print("El promedio de las temperaturas a nivel nacional es de {}°C".format(int(prom_nacional)))
 
+
+
+
 ''' Promedio de las temperaturas de los meses mas calientes de los tres departamentos'''
 
 prom_temp_3dprts=(temp_mayor_santander+temp_mayor_narinno+temp_mayor_guajira)/3
 print("El promedio de las temperaturas de los meses mas calientes de los tres departamentos es de {}°C".format(int(prom_temp_3dprts)))
+
+
 
 '''cual promedio de los tres departamentos fue mayor'''
 
@@ -88,6 +93,9 @@ else:
 		if prom_temp_guajira>prom_temp_santander and prom_temp_guajira>prom_temp_narinno:
 			print("Del promedio de los tres departamento el mayor fue el del departamento de la Guajira con {}°C".format(prom_temp_guajira))
 
+
+
+
 '''Cual fue la temperatura mas caliente en todo el año, en que mes se presentó y en que departamento'''
 
 if temp_mayor_santander>temp_mayor_narinno and temp_mayor_santander>temp_mayor_guajira:
@@ -98,6 +106,9 @@ else:
 	else:
 		if temp_mayor_guajira>temp_mayor_santander and temp_mayor_guajira>temp_mayor_narinno:
 			print("La temperatura mas caliente que se presentó en todo el año fue {}°C, se presentó en el mes de {} en el departamento de La Guajira".format(temp_mayor_guajira,mes_caliente_guajira))
+
+
+
 
 '''Desviacion estándar de los tres departamentos'''
 
