@@ -1,25 +1,36 @@
 
+def sum_lista(lista):
+    suma = 0
 
-def calcula_promedio(a):
-    temp_sum = 0
-    temp_cont = len(a)
+    for temp in lista:
+        suma += temp
 
-    for temperatura in a:
-        temp_sum += temperatura
+    return suma
+
+
+def mayor(lista):
+    num_mayor=lista[0]
+
+    for i in lista:
+        if i>num_mayor:
+            num_mayor=i
+    return num_mayor
+
+
+def calcula_promedio(lista):
+    temp_sum =sum_lista(lista)
+    temp_cont = len(lista)
 
     promedio_final = temp_sum / temp_cont
+
     return promedio_final
 
 
 def mes_caliente(lista):
-    mes_mas_caliente = lista[0]
+    temp_mas_caliente = mayor(lista)
     mes = []
 
-    for temp in lista:
-        if temp > mes_mas_caliente:
-            mes_mas_caliente = temp
-
-    posicion = lista.index(mes_mas_caliente)
+    posicion = lista.index(temp_mas_caliente)
 
     if posicion == 0:
         mes.append("Enero")
@@ -59,32 +70,12 @@ def mes_caliente(lista):
     return mes
 
 
-def sum_lista(lista):
-    suma = 0
-
-    for temp in lista:
-        suma += temp
-
-    return suma
-
-
-def mayor(lista):
-	num_mayor=lista[0]
-
-	for i in lista:
-		if i>num_mayor:
-			num_mayor=i
-	return num_mayor
-
 
 def desv_estandar(lista):
-    temp_sum = 0
+    temp_sum = sum_lista(lista)
     temp_cont = len(lista)
     dif_temp = []
     suma = 0
-
-    for temperatura in lista:
-        temp_sum += temperatura
 
     media = temp_sum / temp_cont
 
